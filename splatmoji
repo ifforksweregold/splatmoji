@@ -76,7 +76,7 @@ while IFS='' read -r line; do
 done < "${conffile}"
 
 # Prompt user for selection
-selection=$(cat ${datafiles_list} | eval ${config[rofi_command]})
+selection=$(cat ${datafiles_list} | dmenu -i -l 20  -fn "Hack Nerd Font Regular 18")
 moji="${selection%%$'\t'*}"
 
 # Results to clipboard or selected x window
